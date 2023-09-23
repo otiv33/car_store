@@ -11,6 +11,19 @@ import { AuthGuardService } from './shared/services/auth-guard/auth-guard.servic
 import { CarService } from './shared/services/car/car.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarTileComponent } from './components/car-tile/car-tile.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RequestInterceptorInterceptor as RequestInterceptor } from './shared/services/request-interceptor/request-interceptor.interceptor';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { NotificationService } from './shared/services/notification-service/notification.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import {FormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {NgFor} from '@angular/common';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -24,9 +37,28 @@ import { CarTileComponent } from './components/car-tile/car-tile.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    NgFor,
+    MatInputModule,
+    FormsModule
   ],
-  providers: [AuthGuardService, CarService],
+  providers: [
+    AuthGuardService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: RequestInterceptor,
+      multi: true,
+    },
+    MatSnackBar,
+    NotificationService,
+    CarService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

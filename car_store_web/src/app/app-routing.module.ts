@@ -8,7 +8,7 @@ import { AuthGuardService } from './shared/services/auth-guard/auth-guard.servic
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', component: IndexComponent, canActivate: mapToCanActivate([AuthGuardService])},
-  { path: 'car-detail', component: CarDetailComponent, canActivate: mapToCanActivate([AuthGuardService]) },
+  { path: 'car-detail/:id', component: CarDetailComponent, canActivate: mapToCanActivate([AuthGuardService]) },
 ];
 
 @NgModule({
