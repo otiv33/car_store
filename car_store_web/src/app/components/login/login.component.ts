@@ -24,13 +24,8 @@ export class LoginComponent {
   }
 
   login(): void {
-    console.log(this.loginForm.value)
     if (this.loginForm.valid) {
-      if (this.loginForm.value.username === 'user' && this.loginForm.value.password === 'password') {
-        this.authService.login(this.loginForm.value.username, this.loginForm.value.password);
-      } else {
-        this.router.navigate(['/login']);
-      }
+      this.authService.login(this.loginForm.value.username, this.loginForm.value.password);
     }
   }
 

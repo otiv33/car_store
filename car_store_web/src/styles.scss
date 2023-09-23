@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 html, body {
   height: 100%;
@@ -15,4 +16,17 @@ body {
 main {
   flex: 1;
   padding: 20px;
+}
+
+.success-snackbar div{
+  background-color: rgb(16, 155, 16);
+  color: white;
+  padding-right:0px;
+  border-radius: 3px;
+}
+.error-snackbar div{
+  background: rgb(244, 86, 86);
+  color: white;
+  padding-right:0px;
+  border-radius: 3px;
 }

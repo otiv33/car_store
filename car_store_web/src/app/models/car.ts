@@ -14,3 +14,4 @@ class Car{
         this.saleDate = saleDate;
     }
 }
+export {Car};

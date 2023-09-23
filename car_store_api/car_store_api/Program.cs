@@ -19,6 +19,16 @@ builder.Services.AddDbContext<CarStoreDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetSection("ConnectionString").Value)
 );
 builder.Services.AddTransient<IStorage<Car>, CarStorage>();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
 
 var app = builder.Build();
 
@@ -32,10 +42,12 @@ if (app.Environment.IsDevelopment())
 // Global exception middleware
 app.UseMiddleware<ExceptionMiddleware>();
 
+app.UseCors("AllowAllOrigins");
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-app.UseAuthentication(); // Add authentication middleware
+app.UseAuthentication();
 
 app.MapControllers();
 

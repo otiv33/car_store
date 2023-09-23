@@ -15,7 +15,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                       <a class="nav-link" routerLink="/">Home</a>
                   </li>
                   <li class="nav-item">
@@ -26,20 +26,20 @@
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#">Contact</a>
-                  </li>
+                  </li> -->
+
               </ul>
+
           </div>
+          <button class="btn-logout" *ngIf="logoutVisible" mat-button (click)="logout()">Logout</button>
       </div>
   </nav>
 
   <!-- Main Content -->
-  <main class="container mt-5">
-      <div class="row">
-          <section class="col-md-9">
-            <!-- ROUTER -->
-            <router-outlet></router-outlet>
-          </section>
-      </div>
+  <main class="container md-8 layout-main">
+    <section class="col-md-8 layout-section">
+      <router-outlet></router-outlet>
+    </section>
   </main>
 
   <!-- Footer -->
