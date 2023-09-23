@@ -1,14 +1,23 @@
-<p>index works!</p>
-
-<div *ngFor="let car of carList">
-  <div class="card" (click)="navigateToCarDetail(car.id)">
-    <div class="card-header">
-      <h5 class="card-title">{{car.name}}</h5>
-    </div>
-    <div class="card-body">
-      <div *ngFor="let car of carList">
-        <app-car-tile [car]="car"></app-car-tile>
-      </div>
-    </div>
+<h2>Featured Cars</h2>
+<br>
+<div class="car-list-div">
+  <div *ngFor="let car of carList" class="car-tile-div">
+    <app-car-tile [car]="car" [parent]="this"></app-car-tile>
   </div>
 </div>
+<br>
+<div class="load-more-div">
+  <button mat-button (click)="loadMore()" *ngIf="moreCarsToLoad">Load More</button>
+  <br>
+  <mat-form-field>
+    <mat-label>Page size</mat-label>
+    <mat-select  (selectionChange)="pageSizeListChange($event)">
+      <mat-option value="3" selected>3</mat-option>
+      <mat-option *ngFor="let ps of pageSizeList" [value]="ps">
+        {{ps}}
+      </mat-option>
+    </mat-select>
+
+  </mat-form-field>
+</div>
+

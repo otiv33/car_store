@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ENV } from 'src/assets/environment';
 import { Observable } from 'rxjs';
+import { Car } from '../../../models/car';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +19,8 @@ export class CarService {
   }
 
   // Read a list of cars
-  getCars(page: number, numberOfItems:number): Observable<Car[]> {
-    return this.http.get<Car[]>(`${this.url}/?page=${page}&numberOfItems=${numberOfItems}`);
+  getCars(pageSize: number, pageNumber:number): Observable<Car[]> {
+    return this.http.get<Car[]>(`${this.url}/?pageSize=${pageSize}&pageNumber=${pageNumber}`);
   }
 
   // Read a single car by ID
