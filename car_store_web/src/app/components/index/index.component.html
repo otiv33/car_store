@@ -1,0 +1,14 @@
+<p>index works!</p>
+
+<div *ngFor="let car of carList">
+  <div class="card" (click)="navigateToCarDetail(car.id)">
+    <div class="card-header">
+      <h5 class="card-title">{{car.name}}</h5>
+    </div>
+    <div class="card-body">
+      <div *ngFor="let car of carList">
+        <app-car-tile [car]="car"></app-car-tile>
+      </div>
+    </div>
+  </div>
+</div>
