@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+using car_store_api.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
@@ -31,14 +32,32 @@ public class ExceptionMiddleware
     private async Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
         context.Response.ContentType = "application/json";
-        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+        string message = string.Empty;
 
+        if (exception.GetType() == typeof(UnathorizedException))
+        {
+            message = "Unauthorized";
+            context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+        }
+        else if (exception.GetType() == typeof(InvalidCredentialsException))
+        {
+            message = "Forbidden"; 
+            context.Response.StatusCode = (int)HttpStatusCode.Forbidden;
+        }
+        else
+        {
+            message = "An error occurred while processing your request.";
+            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+        }
+          
         var errorMessage = new
         {
-            Message = "An error occurred while processing your request.",
+            Message = message,
             Detail = exception.Message
         };
 
         await context.Response.WriteAsJsonAsync(errorMessage);
     }
+
+
 }

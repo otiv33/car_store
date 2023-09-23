@@ -78,3 +78,9 @@ C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\runtimes\win-arm\
 C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\Newtonsoft.Json.dll
