@@ -3,10 +3,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "ng serve",
+      "name": "ng serve - EN",
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
+      "url": "http://localhost:4200/"
+    },
+    {
+      "name": "ng serve - SI",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "npm: start-SI",
       "url": "http://localhost:4200/"
     },
     {

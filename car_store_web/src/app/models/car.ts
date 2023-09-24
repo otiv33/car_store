@@ -5,6 +5,7 @@ class Car{
     color: string;
     price: number;
     saleDate: Date;
+
     constructor(id: number, name: string, year: number, color: string, price: number, saleDate: Date){
         this.id = id;
         this.name = name;

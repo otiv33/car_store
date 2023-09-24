@@ -30,7 +30,7 @@ export class CarService {
 
   // Update an existing car
   updateCar(car: Car): Observable<Car> {
-    return this.http.put<Car>(`${this.url}/${car.id}`, car);
+    return this.http.put<Car>(`${this.url}`, car);
   }
 
   // Delete a car by ID
