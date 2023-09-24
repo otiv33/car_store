@@ -10,6 +10,15 @@
           "style": "scss"
         }
       },
+      "i18n":{
+        "sourceLocale": "en-US",
+        "locales": {
+          "si": {
+            "translation": "src/locale/messages.si.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -59,6 +68,9 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "si":{
+              "localize": ["si"]
             }
           },
           "defaultConfiguration": "production"
@@ -71,6 +83,9 @@
             },
             "development": {
               "browserTarget": "car_store_web:build:development"
+            },
+            "si":{
+              "browserTarget": "car_store_web:build:si"
             }
           },
           "defaultConfiguration": "development"

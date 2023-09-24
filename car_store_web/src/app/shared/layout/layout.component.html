@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Store</title>
+    <title i18n>Car Store</title>
 </head>
 <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-          <a class="navbar-brand" routerLink="/">Car Store</a>
+          <a i18n class="navbar-brand" routerLink="/">Car Store</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
@@ -31,7 +31,7 @@
               </ul>
 
           </div>
-          <button class="btn-logout" *ngIf="logoutVisible" mat-button (click)="logout()">Logout</button>
+          <button i18n class="btn-logout" *ngIf="logoutVisible" mat-button (click)="logout()">Logout</button>
       </div>
   </nav>
 
@@ -44,7 +44,7 @@
 
   <!-- Footer -->
   <footer class="bg-light text-center py-3">
-      <p>&copy; 2023 Car Store</p>
+      <p i18n>&copy; 2023 Car Store</p>
   </footer>
 </body>
 </html>
