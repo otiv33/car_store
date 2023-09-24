@@ -24,6 +24,7 @@ import {MatInputModule} from '@angular/material/input';
 import {NgFor} from '@angular/common';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { CarNewComponent } from './components/car-new/car-new.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     IndexComponent,
     CarDetailComponent,
     LoginComponent,
-    CarTileComponent
+    CarTileComponent,
+    CarNewComponent
   ],
   imports: [
     BrowserModule,

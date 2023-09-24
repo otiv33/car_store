@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthGuardService } from 'src/app/shared/services/auth-guard/auth-guard.service';
+import { NotificationService } from 'src/app/shared/services/notification-service/notification.service';
 
 
 @Component({
@@ -15,8 +16,8 @@ export class LoginComponent {
   constructor(
     private authService: AuthGuardService,
     private formBuilder: FormBuilder,
-    private router: Router
-  ){
+    private notificationService: NotificationService,
+    ){
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -26,6 +27,8 @@ export class LoginComponent {
   login(): void {
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value.username, this.loginForm.value.password);
+    }else{
+      this.notificationService.showErrorNotification('Login form is not valid!');
     }
   }
 
