@@ -1,26 +1,26 @@
 <div>
   <form [formGroup]="editForm" (ngSubmit)="submit()">
     <div class="form-group">
-      <label for="name">Name</label>
+      <label i18n for="name">Name</label>
       <input type="text" class="form-control" formControlName="name" required>
     </div>
     <div class="form-group">
-      <label for="color">Color</label>
+      <label i18n for="color">Color</label>
       <input type="text" class="form-control" formControlName="color" required>
     </div>
     <div class="form-group">
-      <label for="price">Price</label>
+      <label i18n for="price">Price</label>
       <input type="text" class="form-control" formControlName="price" required>
     </div>
     <div class="form-group">
-      <label for="saleDate">Sale date</label>
+      <label i18n for="saleDate">Sale date</label>
       <input type="date" class="form-control" formControlName="saleDate" required>
     </div>
     <div class="form-group">
-      <label for="year">Year</label>
+      <label i18n for="year">Year</label>
       <input type="text" class="form-control" formControlName="year" required>
     </div>
     <br>
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button i18n type="submit" class="btn btn-primary">Save</button>
   </form>
 </div>

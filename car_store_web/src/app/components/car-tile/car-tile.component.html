@@ -2,14 +2,14 @@
   <div class="card-body">
       <h5 class="card-title">{{car?.name}}</h5>
       <p class="card-text">
-        <li>Color: {{car?.color}}</li>
-        <li>Price: {{car?.price}}</li>
-        <li>Sale date: {{(moment(car?.saleDate)).format('DD.MM.YYYY')}}</li>
-        <li>Year: {{car?.year}}</li>
+        <li i18n>Color: {{car?.color}}</li>
+        <li i18n>Price: {{car?.price}}</li>
+        <li i18n>Sale date: {{(moment(car?.saleDate)).format('DD.MM.YYYY')}}</li>
+        <li i18n>Year: {{car?.year}}</li>
       </p>
       <div class="action-div">
-        <button mat-icon-button (click)="editCar()"><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button (click)="deleteCar()"><mat-icon>delete</mat-icon></button>
+        <button i18n mat-icon-button (click)="editCar()"><mat-icon>edit</mat-icon></button>
+        <button i18n mat-icon-button (click)="deleteCar()"><mat-icon>delete</mat-icon></button>
       </div>
   </div>
 </div>

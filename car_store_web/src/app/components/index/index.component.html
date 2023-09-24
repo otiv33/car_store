@@ -1,6 +1,6 @@
 <div class="title-div">
-  <h2>Featured Cars</h2>
-  <button mat-button (click)="addCar()">Add Car</button>
+  <h2 i18n>Featured Cars</h2>
+  <button i18n mat-button (click)="addCar()">Add Car</button>
 </div>
 <br>
 <div class="car-list-div">
@@ -10,10 +10,10 @@
 </div>
 <br>
 <div class="load-more-div">
-  <button mat-button (click)="loadMore()" *ngIf="moreCarsToLoad">Load More</button>
+  <button i18n mat-button (click)="loadMore()" *ngIf="moreCarsToLoad">Load More</button>
   <br>
   <mat-form-field>
-    <mat-label>Page size</mat-label>
+    <mat-label i18n>Page size</mat-label>
     <mat-select  (selectionChange)="pageSizeListChange($event)">
       <mat-option *ngFor="let ps of pageSizeList" [value]="ps">
         {{ps}}
