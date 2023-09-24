@@ -1,4 +1,5 @@
 ﻿using car_store_api.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.Eventing.Reader;
 
 namespace car_store_api.Storage
@@ -24,6 +25,7 @@ namespace car_store_api.Storage
 
         public Car Insert(Car car)
         {
+            car.Id = null;
             _context.Cars.Add(car);
             _context.SaveChanges();
             return car;
@@ -53,9 +55,13 @@ namespace car_store_api.Storage
                 throw new Exception("Car with this id does not exist");
         }
 
-        private bool Exists(int id)
+        private bool Exists(int? id)
         {
-            return _context.Cars.FirstOrDefault(x => x.Id == id) != null ? true : false;
+            if(id == null)
+                return false;
+            Car? car = _context.Cars.FirstOrDefault(x => x.Id == id);
+            _context.ChangeTracker.Clear();
+            return car != null;
         }
     }
 }

@@ -3,11 +3,7 @@ import { Router } from '@angular/router';
 import { Car } from 'src/app/models/car';
 import { CarService } from 'src/app/shared/services/car/car.service';
 import { NotificationService } from 'src/app/shared/services/notification-service/notification.service';
-import {FormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {NgFor} from '@angular/common';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -19,7 +15,7 @@ export class IndexComponent {
   pageSize: number = 3;
   pageNumber: number = 1;
   moreCarsToLoad: boolean = true;
-  pageSizeList: number[] = [5, 10];
+  pageSizeList: number[] = [3, 5, 10];
 
   constructor(
     private carService: CarService,
@@ -27,6 +23,15 @@ export class IndexComponent {
     private notificationService: NotificationService) { }
 
   ngOnInit() {
+
+    // Get pageSize
+    const _pageSize = localStorage.getItem('pageSize');
+    if(_pageSize == '' || _pageSize == null){
+      this.pageSize = 3;
+      localStorage.setItem('pageSize', '3');
+    }else{
+      this.pageSize = parseInt(_pageSize);
+    }
     this.getCars();
   }
 
@@ -52,6 +57,7 @@ export class IndexComponent {
 
   public pageSizeListChange(event: any) {
     this.pageSize = event.value as number;
+    localStorage.setItem('pageSize', this.pageSize.toString());
     this.pageNumber = 1;
     this.carList = [];
     this.getCars();
@@ -59,6 +65,10 @@ export class IndexComponent {
 
   public removeCarFromList(car: Car){
     this.carList = this.carList.filter(x => x.id != car.id);
+  }
+
+  public addCar(){
+    this.router.navigate(['car-new']);
   }
 
 }
