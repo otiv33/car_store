@@ -46,7 +46,7 @@ public class CarController : ControllerBase
     }
 
     [HttpPut]
-    public IActionResult UpdateById([FromBody] Car car)
+    public IActionResult Update([FromBody] Car car)
     {
         var res = _carStorage.Update(car);
         return Ok(res);
