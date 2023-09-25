@@ -24,7 +24,7 @@ namespace car_store_api.Controllers
             if (user.Name == "User" && user.Password == "123"){
                 var service = new JwtService(_configuration);
                 string token = service.GenerateToken(user.Name, "User");
-                return Ok(new{ token = token });
+                return Ok(new { token = token });
             }
             else
             {

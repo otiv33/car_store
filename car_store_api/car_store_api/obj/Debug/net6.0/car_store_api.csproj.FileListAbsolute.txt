@@ -84,3 +84,4 @@ C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\Microsoft.Identit
 C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Work\car_store\car_store_api\car_store_api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll

@@ -12,34 +12,29 @@ import { IndexComponent } from '../index/index.component';
   styleUrls: ['./car-tile.component.scss']
 })
 export class CarTileComponent {
-  @Input() car: any;
-  @Input() parent: any;
+  @Input({required: true}) car!: Car;
+  @Input({required: true}) parent!: IndexComponent;
   moment = moment;
 
   constructor(
     private router: Router,
     private carService: CarService,
     private notificationService: NotificationService){
-
   }
 
   public editCar(){
-    if(this.car != undefined){
-      this.router.navigate(['/car-detail', this.car.id]);
-    }
+    this.router.navigate(['/car-detail', this.car.id]);
   }
 
   public deleteCar(){
-    if(this.car != undefined){
-      this.carService.deleteCar(this.car.id).subscribe({
-        next: (res) => {
-          this.notificationService.showNotification("Car deleted successfully!");
-          this.parent?.removeCarFromList(this.car);
-        },
-        error: (err) => {
-          this.notificationService.showErrorNotification(err);
-        }
-      });
-    }
+    this.carService.deleteCar(this.car.id).subscribe({
+      next: (res) => {
+        this.notificationService.showNotification("Car deleted successfully!");
+        this.parent?.removeCarFromList(this.car);
+      },
+      error: (err) => {
+        this.notificationService.showErrorNotification(err);
+      }
+    });
   }
 }
