@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host=127.0.0.1",
+    "start-dev": "ng serve --configuration development --host=127.0.0.1",
     "start-prod": "ng serve --configuration production --host=127.0.0.1",
     "start-SI": "ng serve --configuration si --host=127.0.0.1",
     "start-SI-prod": "ng serve --configuration productionSI --host=127.0.0.1",
