@@ -1,6 +1,7 @@
 using car_store_api;
 using car_store_api.Models;
 using car_store_api.Storage;
+using car_store_api_test.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

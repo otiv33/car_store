@@ -23,7 +23,6 @@ export class IndexComponent {
     private notificationService: NotificationService) { }
 
   ngOnInit() {
-
     // Get pageSize
     const _pageSize = localStorage.getItem('pageSize');
     if(_pageSize == '' || _pageSize == null){
@@ -35,7 +34,7 @@ export class IndexComponent {
     this.getCars();
   }
 
-  private getCars(){
+  public getCars(){
     this.carService.getCars(this.pageSize, this.pageNumber).subscribe({
       next: (res) => {
         if(res.length == 0){

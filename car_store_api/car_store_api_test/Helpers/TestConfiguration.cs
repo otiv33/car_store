@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace car_store_api_test
+namespace car_store_api_test.Helpers
 {
     using Microsoft.Extensions.Configuration;
 
