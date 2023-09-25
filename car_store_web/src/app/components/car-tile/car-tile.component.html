@@ -1,11 +1,11 @@
 <div class="card">
   <div class="card-body">
-      <h5 class="card-title">{{car?.name}}</h5>
+      <h5 class="card-title">{{car.name}}</h5>
       <p class="card-text">
-        <li i18n>Color: {{car?.color}}</li>
-        <li i18n>Price: {{car?.price}}</li>
-        <li i18n>Sale date: {{(moment(car?.saleDate)).format('DD.MM.YYYY')}}</li>
-        <li i18n>Year: {{car?.year}}</li>
+        <li i18n>Color: {{car.color}}</li>
+        <li i18n>Price: {{car.price}}</li>
+        <li i18n>Sale date: {{(moment(car.saleDate)).format('DD.MM.YYYY')}}</li>
+        <li i18n>Year: {{car.year}}</li>
       </p>
       <div class="action-div">
         <button i18n mat-icon-button class="edit-car" (click)="editCar()"><mat-icon>edit</mat-icon></button>

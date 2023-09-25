@@ -17,6 +17,13 @@
       "url": "http://localhost:4200/"
     },
     {
+      "name": "ng serve - SI - prod",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "npm: start-SI-prod",
+      "url": "http://localhost:4200/"
+    },
+    {
       "name": "ng test",
       "type": "chrome",
       "request": "launch",
