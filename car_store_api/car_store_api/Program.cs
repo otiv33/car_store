@@ -15,8 +15,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // DI
-builder.Services.AddDbContext<CarStoreDbContext>(options => 
-    options.UseSqlite(builder.Configuration.GetSection("ConnectionString").Value)
+builder.Services.AddDbContext<CarStoreDbContext>(options =>
+     options.UseSqlite(builder.Configuration.GetSection("ConnectionString").Value)
 );
 builder.Services.AddTransient<IStorage<Car>, CarStorage>();
 builder.Services.AddCors(options =>

@@ -22,4 +22,10 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+	<None Include="CarStore.db" CopyToPublishDirectory="Always"></None>
+	<None Include="CarStoreProduction.db" CopyToPublishDirectory="Always"></None>
+  </ItemGroup>
+
 </Project>

@@ -11,8 +11,8 @@ using car_store_api;
 namespace car_store_api.Migrations
 {
     [DbContext(typeof(CarStoreDbContext))]
-    [Migration("20230924093029_IdFix")]
-    partial class IdFix
+    [Migration("20230925165119_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,7 +22,7 @@ namespace car_store_api.Migrations
 
             modelBuilder.Entity("car_store_api.Models.Car", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 

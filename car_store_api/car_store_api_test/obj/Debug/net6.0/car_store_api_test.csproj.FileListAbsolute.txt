@@ -159,3 +159,4 @@ C:\Work\car_store\car_store_api\car_store_api_test\obj\Debug\net6.0\refint\car_s
 C:\Work\car_store\car_store_api\car_store_api_test\obj\Debug\net6.0\car_store_api_test.pdb
 C:\Work\car_store\car_store_api\car_store_api_test\obj\Debug\net6.0\car_store_api_test.genruntimeconfig.cache
 C:\Work\car_store\car_store_api\car_store_api_test\obj\Debug\net6.0\ref\car_store_api_test.dll
+C:\Work\car_store\car_store_api\car_store_api_test\bin\Debug\net6.0\appsettings.Production.json
