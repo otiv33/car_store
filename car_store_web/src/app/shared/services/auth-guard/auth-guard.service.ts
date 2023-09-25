@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
-import { ENV } from 'src/assets/environment';
+import { ENV } from 'src/environments/environment';
 import { NotificationService } from '../notification-service/notification.service';
 import jwt_decode from 'jwt-decode';
 
