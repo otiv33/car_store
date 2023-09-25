@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
-import { ENV } from 'src/assets/environment';
+import { ENV } from 'src/environments/environment';
 import { NotificationService } from '../notification-service/notification.service';
 import jwt_decode from 'jwt-decode';
 
 @Injectable({providedIn: 'root'})
 export class AuthGuardService {
+  private urlLogin = ENV.apiURL + '/login';
+
   constructor(
     private router: Router,
     private http: HttpClient,
@@ -26,7 +28,7 @@ export class AuthGuardService {
       Name: username,
       Password: password
     };
-    this.http.post(ENV.apiURL + '/login', user).subscribe({
+    this.http.post(this.urlLogin, user)?.subscribe({
       next: (res: any) => {
         if(res){
           localStorage.setItem('token', res.token.toString());
@@ -36,7 +38,8 @@ export class AuthGuardService {
       error: (e) => {
         this.notificationService.showErrorNotification(e);
       },
-  });
+    });
+    return;
   }
 
   logout(): void {
@@ -44,7 +47,7 @@ export class AuthGuardService {
     this.router.navigate(['/login']);
   }
 
-  isLoggedIn(): boolean {
+  private isLoggedIn(): boolean {
     const token = localStorage.getItem('token') ?? '';
     const auth = this.getDecodedAccessToken(token);
     if(auth != null && token != ''){

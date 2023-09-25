@@ -96,7 +96,7 @@ export class CarDetailComponent {
     }
     this.car.year = year;
 
-    this.carService.updateCar(this.car).subscribe({
+    this.carService.updateCar(this.car)?.subscribe({
       next: (res) => {
         this.notificationService.showNotification("Car updated successfully");
         this.router.navigate(['/']);

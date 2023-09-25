@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9qG9OXZxRpndxW8iS7icyWEAN4HYubolWxErKfYW2KTMBF1+INWmMwNo2V+79PXjuu6yk0o0/yuXadR1LhYysg==",
+  "dgSpecHash": "LxEAac1Q2CkNu/S8nwmxWjBn064kY0enG9H6gPEeFFMjJzgWRPcnMvt/KSABR1/ZHi8MVn0yLXphV/nhBmeAXA==",
   "success": true,
   "projectFilePath": "C:\\Work\\car_store\\car_store_api\\car_store_api\\car_store_api.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\vitoa\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.11\\microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",
     "C:\\Users\\vitoa\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.11\\microsoft.entityframeworkcore.analyzers.7.0.11.nupkg.sha512",
     "C:\\Users\\vitoa\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.11\\microsoft.entityframeworkcore.design.7.0.11.nupkg.sha512",
+    "C:\\Users\\vitoa\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.11\\microsoft.entityframeworkcore.inmemory.7.0.11.nupkg.sha512",
     "C:\\Users\\vitoa\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.11\\microsoft.entityframeworkcore.relational.7.0.11.nupkg.sha512",
     "C:\\Users\\vitoa\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\7.0.11\\microsoft.entityframeworkcore.sqlite.7.0.11.nupkg.sha512",
     "C:\\Users\\vitoa\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\7.0.11\\microsoft.entityframeworkcore.sqlite.core.7.0.11.nupkg.sha512",

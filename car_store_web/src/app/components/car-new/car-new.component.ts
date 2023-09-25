@@ -32,7 +32,7 @@ export class CarNewComponent {
   carId: string = '';
   car: Car = new Car(0, '', 0, '', 0, new Date());
 
-  public submit(){
+  public submit(): void{
     // Name
     const name = this.addForm.controls['name'].value;
     if(name == '' || name == null || !this.addForm.controls['name'].valid){
@@ -78,7 +78,7 @@ export class CarNewComponent {
     }
     this.car.year = year;
 
-    this.carService.createCar(this.car).subscribe({
+    this.carService.createCar(this.car)?.subscribe({
       next: (res) => {
         this.notificationService.showNotification("Car updated successfully");
         this.router.navigate(['/']);

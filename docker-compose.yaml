@@ -1,0 +1,19 @@
+version: '1'
+
+services:
+  backend:
+    image: carstoreweb:latest
+    build:
+      context: ./car_store_api/car_store_api
+      dockerfile: ./Dockerfile
+    ports:
+      - "81:80"
+      - "443:443"
+
+  frontend:
+    image: carstoreapi:latest
+    build:
+      context: ./car_store_web
+      dockerfile: ./Dockerfile
+    ports:
+      - "4200:4200"

@@ -19,7 +19,7 @@ namespace car_store_api.Migrations
 
             modelBuilder.Entity("car_store_api.Models.Car", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
