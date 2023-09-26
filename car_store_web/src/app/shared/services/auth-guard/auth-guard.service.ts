@@ -49,6 +49,7 @@ export class AuthGuardService {
 
   private isLoggedIn(): boolean {
     const token = localStorage.getItem('token') ?? '';
+    if(token == '') return false;
     const auth = this.getDecodedAccessToken(token);
     if(auth != null && token != ''){
       if( auth.exp> Date.now()/1000){
