@@ -59,3 +59,7 @@ docker compose up
 ```
 Na naslovu http://localhost:81 bi morali dobiti API.<br/>
 Na naslovu http://localhost:4200 bi morali dobiti spletno aplikacijo
+
+## Instructions
+
+![Instructions](https://github.com/otiv33/car_store/blob/main/Instructions.png "Instructions")
